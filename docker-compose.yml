@@ -1,0 +1,24 @@
+version: "3"
+services:
+  movie:
+    image: tvlokesh0705/phonepaymovies:v1
+    ports:
+      - "8000:80"
+    deploy:
+      replicas: 4
+
+  train:
+    image: tvlokesh0705/phonepaytrains:v1
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 4
+
+  recharge:
+    image: tvlokesh0705/phonepayrecharges:v1
+    ports:
+      - "8002:80"
+    deploy:
+      replicas: 4
+
+
